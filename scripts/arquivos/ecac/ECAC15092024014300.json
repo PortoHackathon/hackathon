@@ -1,0 +1,30 @@
+{
+    "tipo": "EVENTOCRIACAOAVISOCHEGADA",
+    "timestamp": "15092024014300",
+    "navios": [
+        {
+            "viagem": "13252024",
+            "imo": "30160730",
+            "nome_navio": "RMS PERRY, YOUNG AND RAMIREZ",
+            "data": "25012024",
+            "hora": "174957",
+            "tipo_escala": "C"
+        },
+        {
+            "viagem": "70582024",
+            "imo": "33807424",
+            "nome_navio": "RMS CHAVEZ GROUP",
+            "data": "15072024",
+            "hora": "225324",
+            "tipo_escala": "V"
+        },
+        {
+            "viagem": "94522024",
+            "imo": "61882522",
+            "nome_navio": "MV RAY-CERVANTES",
+            "data": "28012024",
+            "hora": "021132",
+            "tipo_escala": "P"
+        }
+    ]
+}

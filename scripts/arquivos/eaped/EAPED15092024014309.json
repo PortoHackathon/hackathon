@@ -1,0 +1,33 @@
+{
+    "tipo": "EVENTOPREVISAOATRACACAOCADASTROATUALIZACAO",
+    "timestamp": "15092024014309",
+    "atracoes": [
+        {
+            "viagem": "58202024",
+            "imo": "17294470",
+            "armazem": "835",
+            "data": "31082024",
+            "hora": "133039",
+            "tipo": "E",
+            "tipo_transitacao": "ATUALIZACAO"
+        },
+        {
+            "viagem": "60962024",
+            "imo": "51949834",
+            "armazem": "894",
+            "data": "28012024",
+            "hora": "002851",
+            "tipo": "E",
+            "tipo_transitacao": "ATUALIZACAO"
+        },
+        {
+            "viagem": "83032024",
+            "imo": "61586584",
+            "armazem": "232",
+            "data": "22062024",
+            "hora": "000751",
+            "tipo": "E",
+            "tipo_transitacao": "CADASTRO"
+        }
+    ]
+}

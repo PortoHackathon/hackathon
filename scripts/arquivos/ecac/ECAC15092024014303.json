@@ -1,0 +1,62 @@
+{
+    "tipo": "EVENTOCRIACAOAVISOCHEGADA",
+    "timestamp": "15092024014303",
+    "navios": [
+        {
+            "viagem": "79022024",
+            "imo": "51744094",
+            "nome_navio": "MS MORGAN-GUZMAN",
+            "data": "11072024",
+            "hora": "194403",
+            "tipo_escala": "V"
+        },
+        {
+            "viagem": "62452024",
+            "imo": "70104489",
+            "nome_navio": "SS SALAZAR-MCMILLAN",
+            "data": "22042024",
+            "hora": "132045",
+            "tipo_escala": "V"
+        },
+        {
+            "viagem": "53472024",
+            "imo": "35014062",
+            "nome_navio": "SS CERVANTES-BROWN",
+            "data": "09042024",
+            "hora": "222153",
+            "tipo_escala": "D"
+        },
+        {
+            "viagem": "83732024",
+            "imo": "29273835",
+            "nome_navio": "MS PEREZ, CHAPMAN AND ANDERSON",
+            "data": "05072024",
+            "hora": "193834",
+            "tipo_escala": "E"
+        },
+        {
+            "viagem": "40642024",
+            "imo": "95434342",
+            "nome_navio": "RMS JONES-TORRES",
+            "data": "03042024",
+            "hora": "133540",
+            "tipo_escala": "E"
+        },
+        {
+            "viagem": "49962024",
+            "imo": "58500365",
+            "nome_navio": "HMS CAMPBELL-OLSON",
+            "data": "13012024",
+            "hora": "124545",
+            "tipo_escala": "C"
+        },
+        {
+            "viagem": "35782024",
+            "imo": "47877240",
+            "nome_navio": "SS LONG AND SONS",
+            "data": "22022024",
+            "hora": "140358",
+            "tipo_escala": "D"
+        }
+    ]
+}
