@@ -1,0 +1,15 @@
+{
+    "tipo": "EVENTOPREVISAOATRACACAOCADASTROATUALIZACAO",
+    "timestamp": "15092024014312",
+    "atracoes": [
+        {
+            "viagem": "42302024",
+            "imo": "37827769",
+            "armazem": "709",
+            "data": "21012024",
+            "hora": "164703",
+            "tipo": "E",
+            "tipo_transitacao": "ATUALIZACAO"
+        }
+    ]
+}

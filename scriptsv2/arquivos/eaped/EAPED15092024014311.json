@@ -1,0 +1,96 @@
+{
+    "tipo": "EVENTOPREVISAOATRACACAOCADASTROATUALIZACAO",
+    "timestamp": "15092024014311",
+    "atracoes": [
+        {
+            "viagem": "72432024",
+            "imo": "54872225",
+            "armazem": "262",
+            "data": "30072024",
+            "hora": "063643",
+            "tipo": "D",
+            "tipo_transitacao": "ATUALIZACAO"
+        },
+        {
+            "viagem": "34922024",
+            "imo": "80054685",
+            "armazem": "438",
+            "data": "12042024",
+            "hora": "125931",
+            "tipo": "D",
+            "tipo_transitacao": "CADASTRO"
+        },
+        {
+            "viagem": "92902024",
+            "imo": "84133226",
+            "armazem": "958",
+            "data": "05092024",
+            "hora": "123057",
+            "tipo": "P",
+            "tipo_transitacao": "ATUALIZACAO"
+        },
+        {
+            "viagem": "67042024",
+            "imo": "34313879",
+            "armazem": "679",
+            "data": "06042024",
+            "hora": "104747",
+            "tipo": "P",
+            "tipo_transitacao": "CADASTRO"
+        },
+        {
+            "viagem": "81122024",
+            "imo": "82522777",
+            "armazem": "471",
+            "data": "03092024",
+            "hora": "232836",
+            "tipo": "P",
+            "tipo_transitacao": "CADASTRO"
+        },
+        {
+            "viagem": "94422024",
+            "imo": "86929716",
+            "armazem": "680",
+            "data": "09022024",
+            "hora": "065509",
+            "tipo": "D",
+            "tipo_transitacao": "CADASTRO"
+        },
+        {
+            "viagem": "32972024",
+            "imo": "35078129",
+            "armazem": "450",
+            "data": "01082024",
+            "hora": "050847",
+            "tipo": "D",
+            "tipo_transitacao": "ATUALIZACAO"
+        },
+        {
+            "viagem": "36402024",
+            "imo": "86054910",
+            "armazem": "814",
+            "data": "30072024",
+            "hora": "121015",
+            "tipo": "D",
+            "tipo_transitacao": "CADASTRO"
+        },
+        {
+            "viagem": "15412024",
+            "imo": "56052070",
+            "armazem": "152",
+            "data": "17022024",
+            "hora": "142113",
+            "tipo": "D",
+            "tipo_transitacao": "CADASTRO"
+        },
+        {
+            "viagem": "99222024",
+            "imo": "25579139",
+            "armazem": "250",
+            "data": "23022024",
+            "hora": "191916",
+            "tipo": "P",
+            "tipo_transitacao": "ATUALIZACAO"
+        }
+    ]
+}
