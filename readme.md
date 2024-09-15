@@ -16,4 +16,15 @@
 *Executar comando: python scripts\app.py*
 
 
+## Instalação do dashboard
+
+É necessário seguir estritamente os pré-requisitos´
+- NodeJS instalado na máquina, versão 20.17
+- Conexão com a internet, para ser exibido os dados
+
+## Passo a Passo
+
+- Abra o terminal na pasta dashboard e rode o npm install
+- rode um npm start, e irá abrir o software
+
 

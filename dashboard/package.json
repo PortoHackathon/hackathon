@@ -4,7 +4,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.suaempresa.dthelper",
+    "win": {
+      "target": "portable",
+      "icon": "build/icons/icon.ico"
+    }
   },
   "keywords": [],
   "author": "",

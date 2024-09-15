@@ -84,22 +84,18 @@ function populateTablesRAPs(data) {
 }
 
 function getAndCompareCountsRapsLocalStorage(countErros, countNaoEncontrado) {
-    const countErrosLocal = parseInt(localStorage.getItem('countErrosRaps')) || 0;
-    const countNaoEncontradoLocal = parseInt(localStorage.getItem('countNaoEncontradoRaps')) || 0;
+    let countErrosLocal = parseInt(localStorage.getItem('countErrosRaps')) || 0;
+    let countNaoEncontradoLocal = parseInt(localStorage.getItem('countNaoEncontradoRaps')) || 0;
 
-    console.log(countErros, countErrosLocal);
+    let telefone = localStorage.getItem('telefone');
 
-    console.log(countNaoEncontrado, countNaoEncontradoLocal);
-
-    const telefone = localStorage.getItem('telefone');
-
-    const errosChanged = countErros !== countErrosLocal || countErros > countErrosLocal;
-    const naoEncontradoChanged = countNaoEncontrado !== countNaoEncontradoLocal || countNaoEncontrado > countNaoEncontradoLocal;
+    let errosChanged = countErros !== countErrosLocal || countErros > countErrosLocal;
+    let naoEncontradoChanged = countNaoEncontrado !== countNaoEncontradoLocal || countNaoEncontrado > countNaoEncontradoLocal;
 
     // console.log(errosChanged, naoEncontradoChanged);
 
     if (errosChanged || naoEncontradoChanged) {
-        const message = `Erros: ${countErros}, Não Enviado: ${countNaoEncontrado}`;
+        let message = `Erros: ${countErros}, Não Enviado: ${countNaoEncontrado}`;
         
         window.electron.notify(message);
 
@@ -310,13 +306,11 @@ function populateTablesPrevisao(data) {
 }
 
 function getAndCompareCountsPrevisaoLocalStorage(countErros) {
-    const countErrosLocal = parseInt(localStorage.getItem('countErrosPrevisao')) || 0;
+    let countErrosLocal = parseInt(localStorage.getItem('countErrosPrevisao')) || 0;
 
-    const telefone = localStorage.getItem('telefone');
+    let telefone = localStorage.getItem('telefone');
 
-    const errosChanged = countErros !== countErrosLocal || countErros > countErrosLocal;
-
-    console.log(errosChanged);
+    let errosChanged = countErros !== countErrosLocal || countErros > countErrosLocal;
 
     if (errosChanged) {
         const message = `Erros: ${countErros}`;
