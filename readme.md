@@ -7,13 +7,32 @@
 
 ## Passo a Passo
 
-- Instalar os pacotes presentes no arquivo *requiriments.txt*
+0 - criar ambiente virtual
 
-*Executar comando: pip install -r requirements.txt*
+*Executar o comando: python -m venv venv*
 
-- Executar o script *app.py* localizado em: *scripts\app.py*
+*Executar o comando: /venv/Scripts/activate*
 
-*Executar comando: python scripts\app.py*
 
+![imagem do terminal](imgs\venv.png)
+
+1 - Instalar os pacotes presentes no arquivo *requiriments.txt*
+
+*Executar o comando: pip install -r requirements.txt*
+
+2 - Executar o script *app.py* localizado em: *scripts\app.py*
+
+*Executar o comando: python scripts\app.py*
+
+3 - Ativação de notificação do whatsapp
+
+3.1 - Adicionar o número: **+14155238886**
+
+![Adicionar o número](imgs\conversar.png)
+
+3.2 - Enviar a seguinte mensagem: **join ourselves-repeat**
+![Confirmação do número](imgs\msg_confirmacao_whatsapp.png)
+
+4 - Executar o aplicativo DTE - Helper
 
 
