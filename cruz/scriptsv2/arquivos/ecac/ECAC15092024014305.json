@@ -1,0 +1,22 @@
+{
+    "tipo": "EVENTOCRIACAOAVISOCHEGADA",
+    "timestamp": "15092024014305",
+    "navios": [
+        {
+            "viagem": "46032024",
+            "imo": "18784800",
+            "nome_navio": "MV GOMEZ, GUTIERREZ AND MARQUEZ",
+            "data": "05032024",
+            "hora": "131117",
+            "tipo_escala": "P"
+        },
+        {
+            "viagem": "94602024",
+            "imo": "37278921",
+            "nome_navio": "MV MILLER, NELSON AND MCDONALD",
+            "data": "15022024",
+            "hora": "204523",
+            "tipo_escala": "C"
+        }
+    ]
+}

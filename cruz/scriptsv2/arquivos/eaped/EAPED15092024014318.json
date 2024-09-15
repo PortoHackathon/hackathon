@@ -1,0 +1,78 @@
+{
+    "tipo": "EVENTOPREVISAOATRACACAOCADASTROATUALIZACAO",
+    "timestamp": "15092024014318",
+    "atracoes": [
+        {
+            "viagem": "67062024",
+            "imo": "21915869",
+            "armazem": "825",
+            "data": "10032024",
+            "hora": "145055",
+            "tipo": "P",
+            "tipo_transitacao": "CADASTRO"
+        },
+        {
+            "viagem": "38882024",
+            "imo": "13531938",
+            "armazem": "286",
+            "data": "04082024",
+            "hora": "074130",
+            "tipo": "E",
+            "tipo_transitacao": "ATUALIZACAO"
+        },
+        {
+            "viagem": "44352024",
+            "imo": "67896689",
+            "armazem": "508",
+            "data": "11052024",
+            "hora": "075612",
+            "tipo": "D",
+            "tipo_transitacao": "ATUALIZACAO"
+        },
+        {
+            "viagem": "27892024",
+            "imo": "62146272",
+            "armazem": "678",
+            "data": "14082024",
+            "hora": "090121",
+            "tipo": "D",
+            "tipo_transitacao": "ATUALIZACAO"
+        },
+        {
+            "viagem": "33932024",
+            "imo": "47201675",
+            "armazem": "564",
+            "data": "02012024",
+            "hora": "142050",
+            "tipo": "P",
+            "tipo_transitacao": "CADASTRO"
+        },
+        {
+            "viagem": "72172024",
+            "imo": "30842640",
+            "armazem": "363",
+            "data": "10052024",
+            "hora": "195235",
+            "tipo": "P",
+            "tipo_transitacao": "ATUALIZACAO"
+        },
+        {
+            "viagem": "80122024",
+            "imo": "84543117",
+            "armazem": "698",
+            "data": "21012024",
+            "hora": "082101",
+            "tipo": "E",
+            "tipo_transitacao": "ATUALIZACAO"
+        },
+        {
+            "viagem": "89602024",
+            "imo": "29548321",
+            "armazem": "509",
+            "data": "07042024",
+            "hora": "023139",
+            "tipo": "E",
+            "tipo_transitacao": "CADASTRO"
+        }
+    ]
+}
