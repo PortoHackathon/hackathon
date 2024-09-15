@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>DTHelper</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+        }
+
+        section {
+            width: 200px;
+            background-color: #80808012;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            position: fixed;
+        }
+
+        section nav {
+            width: 100%;
+        }
+
+        section li {
+            list-style: none;
+            padding: 15px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        section ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        section figure {
+            margin: auto;
+            text-align: center;
+            padding: 20px 0px;
+        }
+
+        section ul form {
+            padding: 5px;
+        }
+
+        section ul form input {
+            width: 100%;
+        }
+
+        #sair {
+            transition: all 0.3s ease;
+        }
+
+        #sair:hover {
+            background-color: #dc3545;
+            color: white !important;
+            cursor: pointer;
+        }
+
+        main {
+            width: 100%;
+            padding-left: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding-bottom: 20px;
+        }
+
+        h1.mt-5 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 400;
+            margin: 20px !important;
+        }
+
+        #contentRAPs,
+        #contentPrevisao {
+            margin-top: 0px !important;
+        }
+
+        button {
+            background-color: #163f6f !important;
+            color: white !important;
+            padding: 15px !important;
+        }
+
+        #btnRAPs:hover,
+        #btnPrevisao:hover {
+            background-color: white !important;
+        }
+
+        .details-button {
+            border: none;
+            background: none;
+            color: #163f6f;
+        }
+
+        .details-button:hover {
+            color: #163f6fa6;
+        }
+
+        .table td,
+        .table th {
+            vertical-align: middle;
+        }
+
+        canvas {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        #contentRAPs,
+        #contentPrevisao {
+            display: none;
+        }
+
+        #contentRAPs.active,
+        #contentPrevisao.active {
+            display: block;
+        }
+
+        button.active {
+            background-color: white !important;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Toast -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Sucesso</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            O telefone foi salvo com sucesso!
+        </div>
+    </div>
+</div>
+    <section>
+        <nav>
+            <figure>
+                <img src="build/icons/icon.png" alt="">
+            </figure>
+            <ul>
+                <form>
+                    <input class="form-control" id="telefone" type="text" placeholder="Adicione um telefone">
+                    <input type="submit" class="btn btn-light" value="Salvar">
+                </form>
+            </ul>
+        </nav>
+    </section>
+    <main>
+        <div class="btn-group mt-4" role="group" aria-label="Navigation Buttons">
+            <button id="btnRAPs" type="button" class="btn bg-light text-secondary active">RAPs</button>
+            <button id="btnPrevisao" type="button" class="btn bg-light text-secondary">Previsão de Atracação</button>
+        </div>
+        <div id="contentRAPs" class="tab-content active mt-4">
+            <h1 class="mt-5">Status de Processamento de Arquivos RAP</h1>
+
+            <canvas id="chartRAP"></canvas>
+
+            <!-- Abas de Status -->
+            <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="erro-tab" data-bs-toggle="tab" href="#erro" role="tab"
+                        aria-controls="erro" aria-selected="true">Erro</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="sucesso-tab" data-bs-toggle="tab" href="#sucesso" role="tab"
+                        aria-controls="sucesso" aria-selected="false">Sucesso</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="nao-enviado-tab" data-bs-toggle="tab" href="#nao-enviado" role="tab"
+                        aria-controls="nao-enviado" aria-selected="false">Não Enviado</a>
+                </li>
+            </ul>
+            <div class="tab-content mt-2" id="myTabContent">
+                <!-- Aba de Erro -->
+                <div class="tab-pane fade show active" id="erro" role="tabpanel" aria-labelledby="erro-tab">
+                    <table class="table table-striped table-bordered mt-3">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Nome do Arquivo</th>
+                                <th>Status</th>
+                                <th>Detalhe do Erro</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-erro">
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Aba de Sucesso -->
+                <div class="tab-pane fade" id="sucesso" role="tabpanel" aria-labelledby="sucesso-tab">
+                    <table class="table table-striped table-bordered mt-3">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Nome do Arquivo</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-sucesso"></tbody>
+                    </table>
+                </div>
+                <!-- Aba de Não Enviado -->
+                <div class="tab-pane fade" id="nao-enviado" role="tabpanel" aria-labelledby="nao-enviado-tab">
+                    <table class="table table-striped table-bordered mt-3">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Nome do navio</th>
+                                <th>Status</th>
+                                <th>Código da viagem</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-nao-encontrado"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div id="contentPrevisao" class="tab-content mt-4">
+            <h1 class="mt-5">Status de Processamento de Arquivos RAP</h1>
+
+            <canvas id="chartPrevisao"></canvas>
+
+            <!-- Abas de Status -->
+            <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="erroPrevisao-tab" data-bs-toggle="tab" href="#erroPrevisao"
+                        role="tab" aria-controls="erroPrevisao" aria-selected="true">Erro</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="sucessoPrevisao-tab" data-bs-toggle="tab" href="#sucessoPrevisao" role="tab"
+                        aria-controls="sucessoPrevisao" aria-selected="false">Sucesso</a>
+                </li>
+            </ul>
+            <div class="tab-content mt-2" id="myTabContent">
+                <!-- Aba de Erro -->
+                <div class="tab-pane fade show active" id="erroPrevisao" role="tabpanel"
+                    aria-labelledby="erroPrevisao-tab">
+                    <table class="table table-striped table-bordered mt-3">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Nome do Arquivo</th>
+                                <th>Status</th>
+                                <th>Detalhe do Erro</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-erro">
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Aba de Sucesso -->
+                <div class="tab-pane fade" id="sucessoPrevisao" role="tabpanel" aria-labelledby="sucessoPrevisao-tab">
+                    <table class="table table-striped table-bordered mt-3">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Nome do Arquivo</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-sucesso"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="renderer.js"></script>
+</body>
+
+</html>
